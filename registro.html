@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>Taller 1 - Registro UdeC</title>
+  
+</head>
+<body>
+
+    <center>
+        <h1>Formulario de Registro</h1>
+        <img src="student.jpg" width="150" border="0" alt="Foto del Estudiante">
+    </center>
+
+    <form action="mailto:prueba@udec.edu.co" method="POST">
+        <table align="center" border="0" cellpadding="5" class="tabla-formulario">
+            <tr>
+                <td><h3>Nombres:</h3></td>
+                <td><input type="text" name="nombres" minlength="3" maxlength="64" required></td>
+            </tr>
+            <tr>
+                <td><h3>Apellidos:</h3></td>
+                <td><input type="text" name="apellidos" minlength="3" maxlength="64" required></td>
+            </tr>
+            <tr>
+                <td><h3>Correo Electrónico:</h3></td>
+                <td>
+                    <input type="email" name="correo" 
+                           pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" 
+                           required title="Incluya un correo válido">
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Usuario:</h3></td>
+                <td>
+                    <input type="text" name="usuario" 
+                           pattern="^[a-zA-Z]{1,14}[0-9]{0,2}$" 
+                           minlength="3" maxlength="16" 
+                           required title="3-16 caracteres: letras y hasta 2 números al final">
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Password:</h3></td>
+                <td>
+                    <input type="password" name="clave" 
+                           pattern="(?=.*[A-Z])(?=(.*[a-z]){2,})(?=(.*[0-9]){5,})[A-Za-z0-9!?-+/&$.]{16}" 
+                           required title="16 caracteres: 1 Mayúscula, 2 Minúsculas y 5 Números mín.">
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Fecha Inscripción:</h3></td>
+                <td>
+                    <input type="date" name="fecha" 
+                           min="2026-02-15" max="2026-03-10" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <br>
+                    <input type="submit" value="Enviar Registro" class="btn-enviar">
+                    <input type="reset" value="Limpiar Formulario" class="btn-limpiar">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
